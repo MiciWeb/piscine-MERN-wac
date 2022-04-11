@@ -1,0 +1,2 @@
+mongosh --port 27042
+use mern-pool

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <br>
+    <form method="post" action="/add">
+        <label for="">Add an user</label>
+        <input type="text" name="lastname" placeholder="Enter last name..." required>
+        <input type="text" name="firstname" placeholder="Enter first name..." required>
+        <input type="text" name="email" placeholder="email" required>
+        <input type="text" name="phone" placeholder="phone" required>
+        <input type="submit" value="Ok">
+    </form>
+    <br>
+    <form action="/search" method="post">
+        <label for="">Search filter</label>
+        <input type="text" name="filter">
+        <input type="submit">
+    </form>
+    <br>
+    <form action="/sort" method="post">
+        <label for="">Sort by</label>
+        <select name="sort" id="">
+            <option value="1">id</option>
+            <option value="1">lastname</option>
+            <option value="1">firstname</option>
+        </select>
+        <input type="submit" value="ok">
+    </form>
+    <br>
+    <form action="delete" method="POST">
+        <label for="">Delete user</label>
+        <input type="text" name="delete">
+        <input type="submit" value="Ok">
+    </form>
+    <br>
+    The Students Collection: <br>
+    <%=result%>
+</body>
+
+</html>

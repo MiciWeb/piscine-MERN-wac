@@ -1,0 +1,12 @@
+db.createCollection( "students",
+   { validator: { $and:
+      [
+         { lastname: { $type: "string" } },
+         { firstname: { $type: "string" } },
+         { email: { $regex: /[\w-]+@([\w-]+\.)+[\w-]+/ } },
+         { phone: { $regex: /[0-9]{10}/  } },
+         { validated: { $in: [ "in progress", "validated", "rejected" ] } },
+         { admin: { $type: "bool" } }
+      ]
+   }
+} )

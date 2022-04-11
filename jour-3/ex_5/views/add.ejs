@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Shop</title>
+    <style>
+        body {
+            background-color: #ff7373;
+            font-family: source-sans-pro, sans-serif;
+        }
+        .error{
+            color: white;
+            font-size: 18px;
+        }
+        h1 {
+            margin-left: auto;
+            margin-top: 50px;
+            text-align: center;
+            font-weight: 100;
+            font-size: 2.8em;
+            color: #ffffff;
+        }
+
+        div {
+            width: 500px;
+            margin: auto;
+        }
+
+        .formStyle {
+            background-color: #ff7373;
+            padding: 20px;
+            width: 400px;
+            margin-bottom: 20px;
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-bottom-color: #ecf0f1;
+            border-top-style: none;
+            border-right-style: none;
+            border-left-style: none;
+            font-size: 1em;
+            font-weight: 100;
+            color: #ffffff;
+        }
+
+        .formButton {
+            float: right;
+            background-color: #ffffff;
+            display: inline-block;
+            color: #f85858;
+            font-size: 28px;
+            font-weight: 500;
+            padding: 6px 24px;
+            margin-top: 15px;
+            margin-right: 60px;
+            text-decoration: none;
+            border: 1px solid;
+            border-radius: 10px;
+        }
+
+        .formButton:hover {
+            background-color: #f85858;
+            color: #ffffff;
+        }
+
+        .formButton:active {
+            position: relative;
+            top: 3px;
+        }
+
+        /*To remove the outline that appears on clicking the input textbox*/
+        input:focus {
+            outline: none;
+        }
+
+        /* To format the placeholder text color */
+        ::-webkit-input-placeholder {
+            color: #ecf0f1;
+        }
+
+        :-moz-placeholder {
+            /* Firefox 18- */
+            color: #ecf0f1;
+        }
+
+        ::-moz-placeholder {
+            /* Firefox 19+ */
+            color: #ecf0f1;
+        }
+
+        :-ms-input-placeholder {
+            color: #ecf0f1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="error">
+        <h1>
+            Admin Pannel <i class="fas fa-users-cog"></i>
+
+        </h1>
+        <div class="card-header" style="text-align: center;">
+          
+        </div>
+
+
+        <div>
+            <form action="/admin/add/product" method="POST">
+                <input type="text" name="titre" class="formStyle" placeholder="titre" required />
+                <input type="text" name="description" class="formStyle" placeholder="description" required />
+                <input type="text" name="prix" class="formStyle" placeholder="prix" required />
+                <input type="text" name="categorie" class="formStyle" placeholder="categorie" required />
+                <input type="submit" value="add" class="formButton">
+            </form>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

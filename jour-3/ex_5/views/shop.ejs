@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Shop</title>
+    <style>
+        body {
+            background-color: #40e0d0;
+            font-family: source-sans-pro, sans-serif;
+        }
+
+        .error {
+            color: white;
+            font-size: 18px;
+        }
+
+        h1,
+        p {
+            margin-left: auto;
+            margin-top: 50px;
+            text-align: center;
+            font-weight: 100;
+            font-size: 2.8em;
+            color: #ffffff;
+        }
+
+        div {
+            width: 500px;
+            margin: auto;
+        }
+
+        h3 {
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="error">
+        <h1><%-error%></h1>
+        <div class="card-header" style="text-align: center;">
+            <!-- <form style="margin-top: 15px;" action="shop" method="post">
+                <div class="input-group"">
+                    <div class=" form-outline">
+                    <input name="titre" type="search" id="form1" class="form-control"
+                        placeholder="Search for products" />
+                </div>
+                <button style="transform: translate(280px,-34px);" type="submit" class="btn btn-primary">
+                    <i class="fas fa-search"></i>
+                </button>
+        </div>
+        </form> -->
+        </p>
+    </div>
+    <% products.forEach(function(product){ %>
+        <div class="card" style="width: 18rem;">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item text-info">
+                    <a href="/shop/<%= product._id%>">
+                        <%= product.titre %>
+                    </a>
+                </li>
+                <li class="list-group-item text-danger">
+                    <%= product.prix %> €
+                </li>
+                <li class="list-group-item text-info">
+                    <%= product.description %>
+                </li>
+                <li class="list-group-item text-info">
+                    <%= product.categorie %>
+                </li>
+            </ul>
+        </div>
+
+        <% })%>
+
+
+            </div>
+</body>
+
+</html>

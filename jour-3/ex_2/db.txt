@@ -1,0 +1,41 @@
+db.createCollection("users", {
+    validator: {
+        $and: [
+            { _id: { $type: "int" } },
+            { login: { $type: "string", $regex: /[\w]{5,20}/ } },
+            { email: { $type: "string", $regex: /[\w-]+@([\w-]+\.)+[\w-]+/ } },
+            { password: { $type: "string" } },
+            { type: { $type: "bool" } }
+        ]
+    }
+})
+
+db.createCollection("products", {
+    validator: {
+        $and: [
+            { titre: { $type: "string" } },
+            { prix: { $type: "int" } },
+            { description: { $type: "string" } },
+            { categorie: { $type: "string" } },
+        ]
+    }
+})
+
+db.createCollection("categorie", {
+    validator: {
+        $and: [
+            { description: { $type: "string" } },
+            { categorie: { $type: "string" } },
+        ]
+    }
+})
+
+
+db.users.insertOne({
+    _id: 101011,
+    login: 'mici',
+    email: 'mici@gmail.com',
+    password: 'jean',
+    type: true
+}
+)

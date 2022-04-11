@@ -1,0 +1,72 @@
+.homeContainer{
+    background-color: #40e0d0;
+    height: 100vh;
+    width: 100vw;
+    overflow: auto;
+}
+.home{
+    text-align: center;
+    height: 13vh;
+    border: 1px solid;
+}
+.btn-add{
+    background-color: #2ecc71;
+    margin-bottom: 8px;
+    transform: translateY(-5px);
+    float: right;
+}
+.comment{
+    height: 200px !important;
+}
+.del{
+    float: right;
+    margin-left: 10px;
+    border: 1px solid white;
+    background-color: white;
+}
+.body{
+    height: 60px;
+    overflow: auto;
+}
+.category{
+    height: 25px;
+    padding: 0;
+    padding-left: 15px;
+}
+.btn-comment{
+    margin-left: 5px;
+}
+.input-add::placeholder{
+    color: grey;
+    padding: 4px;
+}
+.input-add{
+    color: black;
+}
+.tickets{
+    margin-top: 40px !important;
+    width: 40vw;
+    margin: auto;
+}
+li{
+    color: black;
+}
+.formButtonHome {
+    float: right;
+    background-color: #ffffff;
+    display: inline-block;
+    color: #28e6d3;
+    font-size: 28px;
+    font-weight: 500;
+    padding: 6px 24px;
+    margin-top: 15px;
+    margin-right: 60px;
+    text-decoration: none;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+.formButtonHome:hover {
+    background-color: #28e6d3;
+    color: #ffffff;
+}
